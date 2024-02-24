@@ -14,9 +14,6 @@ public class SearchScreen extends AbstractScreen {
     @AndroidFindBy(xpath = "//*[contains(@text, 'Search Wikipedia')]")
     private WebElement searchField;
 
-    @AndroidFindBy(xpath = "//*[@content-desc='Voice input search']")
-    private WebElement voiceSearchButton;
-
     public SearchScreen(AppiumDriver driver) {
         super(driver);
     }
@@ -31,5 +28,4 @@ public class SearchScreen extends AbstractScreen {
         driver.findElement(By.xpath(String.format(textLinkXpath, text))).click();
         return new ArticleScreen(driver);
     }
-
 }
