@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Single Test">
+    <test name="Single Test">
+        <classes>
+            <class name="WelcomeScreenTest">
+                <methods>
+                    <include name="checkSearchingByWord"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
