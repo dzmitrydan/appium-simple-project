@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import screens.MainScreen;
 
-public class WelcomeScreenTest extends BaseTest {
+public class WikipediaMainScreenTest extends BaseTest {
 
     @Test
     public void checkSearchingByWord() {

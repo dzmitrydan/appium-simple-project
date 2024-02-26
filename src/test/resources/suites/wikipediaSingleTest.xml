@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Single Test">
+<suite name="Wikipedia Single Test">
     <test name="Single Test">
         <classes>
-            <class name="WelcomeScreenTest">
+            <class name="WikipediaMainScreenTest">
                 <methods>
                     <include name="checkSearchingByWord"/>
                 </methods>

@@ -29,7 +29,9 @@ public class DriverManager {
         capabilities.setCapability("deviceName", getProperty("device.name"));
         capabilities.setCapability("appPackage", getProperty("app.package"));
         capabilities.setCapability("appActivity", getProperty("app.activity"));
-        capabilities.setCapability("app", new File(getProperty("app.path")).getAbsolutePath());
+        if ("org.wikipedia".equals(getProperty("app.package"))) {
+            capabilities.setCapability("app", new File(getProperty("app.path")).getAbsolutePath());
+        }
         capabilities.setCapability("udid", getProperty("udid"));
         capabilities.setCapability("automationName", "UiAutomator2");
 

@@ -11,15 +11,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public abstract class AbstractScreen {
+public abstract class BaseScreen {
     protected final AppiumDriver driver;
     private final Logger log = LogManager.getRootLogger();
     protected WebDriverWait wait;
 
-    protected AbstractScreen(AppiumDriver driver) {
+    protected BaseScreen(AppiumDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(this.driver, Duration.ofSeconds(30));
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
+        wait = new WebDriverWait(this.driver, Duration.ofSeconds(60));
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(30)), this);
     }
 
     protected boolean isElementVisible(By locator) {
@@ -37,5 +37,4 @@ public abstract class AbstractScreen {
             return false;
         }
     }
-
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SearchScreen extends AbstractScreen {
+public class SearchScreen extends BaseScreen {
     private final String linkXpath = "//*[@resource-id='org.wikipedia:id/page_list_item_title']";
     private final String textLinkXpath = "//*[@resource-id='org.wikipedia:id/page_list_item_title'" +
             " and contains(@text, '%s')]";

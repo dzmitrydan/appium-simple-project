@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class MainScreen extends AbstractScreen {
+public class MainScreen extends BaseScreen {
     private String skipButtonXpath = "//*[contains(@text, 'Skip')]";
 
     @AndroidFindBy(xpath = "//*[contains(@text, 'Search Wikipedia')]")

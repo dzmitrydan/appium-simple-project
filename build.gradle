@@ -18,11 +18,14 @@ dependencies {
 
 test {
     useTestNG() {
-        if (project.hasProperty('simpleTest')) {
-            suites './src/test/resources/suites/simpleTest.xml'
+        if (project.hasProperty('wikipediaTest')) {
+            suites './src/test/resources/suites/wikipediaTest.xml'
         }
-        if (project.hasProperty('singleTest')) {
-            suites './src/test/resources/suites/singleTest.xml'
+        if (project.hasProperty('wikipediaSingleTest')) {
+            suites './src/test/resources/suites/wikipediaSingleTest.xml'
+        }
+        if (project.hasProperty('vintedTest')) {
+            suites './src/test/resources/suites/vintedTest.xml'
         }
     }
 }
