@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -24,13 +25,21 @@ public class TestListener implements ITestListener {
     }
 
     private void saveScreenshot(String testName) {
-        File screenshotFile = ((TakesScreenshot) DriverManager.getDriver())
-                .getScreenshotAs(OutputType.FILE);
+        String directory = "screenshots";
+        Path path = Path.of(directory);
+        if (!Files.exists(path)) {
+            try {
+                Files.createDirectories(path);
+            } catch (Exception e) {
+                log.error("Error creating directory: {}", e.getMessage());
+            }
+        }
+        File screenshotFile = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.FILE);
         try {
-            String destinationPath = "./build/screenshots/" + testName + "_" + getCurrentTimeAsString() + ".png";
+            String destinationPath = path  + "/" + testName + "_" + getCurrentTimeAsString() + ".png";
             Files.copy(screenshotFile.toPath(), new File(destinationPath).toPath(), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
-            log.error("Failed to save screenshot: " + e.getLocalizedMessage());
+            log.error("Failed to save screenshot: {}", e.getLocalizedMessage());
         }
     }
 
