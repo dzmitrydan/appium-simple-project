@@ -5,7 +5,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import testutils.TestListener;
 
-@Listeners({TestListener.class})
 public abstract class BaseTest {
     protected AppiumDriver driver;
 
