@@ -1,10 +1,11 @@
-package screens;
+package screens.wikipedia;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import screens.BaseScreen;
 
 public class SearchScreen extends BaseScreen {
     private final String linkXpath = "//*[@resource-id='org.wikipedia:id/page_list_item_title']";

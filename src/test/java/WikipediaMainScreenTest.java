@@ -1,13 +1,13 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import screens.MainScreen;
+import screens.wikipedia.MainWikipediaScreen;
 
 public class WikipediaMainScreenTest extends BaseTest {
 
     @Test
     public void checkSearchingByWord() {
-        MainScreen mainScreen = new MainScreen(driver);
-        boolean isVoiceSearchButtonExist = mainScreen.clickOnSkipButton()
+        MainWikipediaScreen mainWikipediaScreen = new MainWikipediaScreen(driver);
+        boolean isVoiceSearchButtonExist = mainWikipediaScreen.clickOnSkipButton()
                 .isVoiceSearchButtonExist();
         Assert.assertTrue(isVoiceSearchButtonExist);
     }

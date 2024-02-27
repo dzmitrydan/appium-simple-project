@@ -1,12 +1,13 @@
-package screens;
+package screens.wikipedia;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import screens.BaseScreen;
 
-public class MainScreen extends BaseScreen {
+public class MainWikipediaScreen extends BaseScreen {
     private String skipButtonXpath = "//*[contains(@text, 'Skip')]";
 
     @AndroidFindBy(xpath = "//*[contains(@text, 'Search Wikipedia')]")
@@ -15,13 +16,14 @@ public class MainScreen extends BaseScreen {
     @AndroidFindBy(id = "voice_search_button")
     private WebElement voiceSearchButton;
 
-    public MainScreen(AppiumDriver driver) {
+    public MainWikipediaScreen(AppiumDriver driver) {
         super(driver);
     }
 
-    public MainScreen clickOnSkipButton() {
+    public MainWikipediaScreen clickOnSkipButton() {
         if (isElementVisible(By.xpath(skipButtonXpath))) {
             driver.findElement(By.xpath(skipButtonXpath)).click();
+            log.info("Click 'Skip' button");
         }
         return this;
     }

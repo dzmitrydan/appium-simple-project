@@ -1,7 +1,7 @@
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import screens.vinted.FilterScreen;
-import screens.vinted.MainScreen;
+import screens.vinted.MainVintedScreen;
 import screens.vinted.ProductsScreen;
 
 public class VintedTest extends BaseTest {
@@ -11,8 +11,8 @@ public class VintedTest extends BaseTest {
         String product = "hats";
         String filter = "Brand";
         String brand = "H&M";
-        MainScreen mainScreen = new MainScreen(driver);
-        FilterScreen filterScreen = mainScreen.signIn()
+        MainVintedScreen mainVintedScreen = new MainVintedScreen(driver);
+        FilterScreen filterScreen = mainVintedScreen.signIn()
                 .clickOnSearchField()
                 .enterWordInTheSearchField(product)
                 .openProducts(product)

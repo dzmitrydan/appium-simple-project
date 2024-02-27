@@ -1,6 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="Wikipedia Tests">
+    <listeners>
+        <listener class-name="testutils.AnnotationTransformer"/>
+    </listeners>
     <test name="All Test">
         <classes>
             <class name="WikipediaSearchingTest"/>

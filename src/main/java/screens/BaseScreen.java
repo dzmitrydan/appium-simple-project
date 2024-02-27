@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public abstract class BaseScreen {
     protected final AppiumDriver driver;
-    private final Logger log = LogManager.getRootLogger();
+    protected final Logger log = LogManager.getRootLogger();
     protected WebDriverWait wait;
 
     protected BaseScreen(AppiumDriver driver) {

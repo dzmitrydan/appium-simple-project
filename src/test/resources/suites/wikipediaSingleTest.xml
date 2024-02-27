@@ -1,5 +1,4 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="Wikipedia Single Test">
     <test name="Single Test">
         <classes>
