@@ -9,7 +9,7 @@
 ## Implemented
 - Wikipedia app tests (Android)
 - Vinted app tests (Android)
-- Taking screenshots when tests are falling (saved to dir: `build/screenshots/`)
+- Re-running tests when a fall occurs
 
 ### 1. Wikipedia app
 [<img src="readme-assets/wikipedia.png" width="300" />](readme-assets/wikipedia.png)
