@@ -1,4 +1,4 @@
-package testutility;
+package testutils;
 
 import driver.DriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -27,8 +27,9 @@ public class TestListener implements ITestListener {
         File screenshotFile = ((TakesScreenshot) DriverManager.getDriver())
                 .getScreenshotAs(OutputType.FILE);
         try {
-            String destinationPath = "./target/screenshots/" + testName + "_" + getCurrentTimeAsString() + ".png";
+            String destinationPath = "./screenshots/" + testName + "_" + getCurrentTimeAsString() + ".png";
             Files.copy(screenshotFile.toPath(), new File(destinationPath).toPath(), StandardCopyOption.REPLACE_EXISTING);
+            log.info("Saved screenshot: " + destinationPath);
         } catch (IOException e) {
             log.error("Failed to save screenshot: " + e.getLocalizedMessage());
         }

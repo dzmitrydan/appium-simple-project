@@ -1,6 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="Vinted Tests">
+    <listeners>
+        <listener class-name="testutils.AnnotationTransformer"/>
+    </listeners>
     <test name="Product Filter Test">
         <classes>
             <class name="VintedTest"/>

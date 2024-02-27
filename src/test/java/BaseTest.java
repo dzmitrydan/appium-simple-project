@@ -3,7 +3,7 @@ import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
-import testutility.TestListener;
+import testutils.TestListener;
 
 @Listeners({TestListener.class})
 public abstract class BaseTest {

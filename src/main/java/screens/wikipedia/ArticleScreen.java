@@ -1,8 +1,9 @@
-package screens;
+package screens.wikipedia;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
+import screens.BaseScreen;
 
 public class ArticleScreen extends BaseScreen {
 
