@@ -13,6 +13,9 @@
 - Taking screenshots when tests are falling
 
 ### 1. Wikipedia app
+Precondition:
+- The app is installed on the mobile device
+
 [<img src="readme-assets/wikipedia.png" width="300" />](readme-assets/wikipedia.png)
 
 ### 2. Vinted app

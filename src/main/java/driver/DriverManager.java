@@ -29,7 +29,8 @@ public class DriverManager {
         capabilities.setCapability("deviceName", getProperty("device.name"));
         capabilities.setCapability("appPackage", getProperty("app.package"));
         capabilities.setCapability("appActivity", getProperty("app.activity"));
-        if ("org.wikipedia".equals(getProperty("app.package"))) {
+        System.out.println(getProperty("app.path") == null);
+        if (!"".equals(getProperty("app.path"))) {
             capabilities.setCapability("app", new File(getProperty("app.path")).getAbsolutePath());
         }
         capabilities.setCapability("udid", getProperty("udid"));
